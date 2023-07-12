@@ -10,3 +10,27 @@ learn express step by step :
 
 2.agr nodemon na chle to u can use this command 
   -npx nodemon index.js
+
+
+3.copy and paste this code in index.js 
+
+# start code 
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port http://localhost:${port}`)
+})
+
+#end code here 
+
+
+4.write cmnd to run index.js 
+  -node index.js
+  -nodemon .\index.js 
+  -npx nodemon index.js
