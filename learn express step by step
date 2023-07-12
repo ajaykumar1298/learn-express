@@ -34,3 +34,40 @@ app.listen(port, () => {
   -node index.js
   -nodemon .\index.js 
   -npx nodemon index.js
+
+
+5.create new folder names =>routes/blog.js ->saare routing idhr se hoge index db me koi routing nhi rhkege 
+
+paste this code in blog.js 
+
+  # start code here 
+  const express =require("express")
+  const route=express.Router()
+
+  route.get("/",(req,res)=>{
+    res.send("hey")
+  })
+
+  module.exports=route
+
+  # end code here 
+
+and update code index.js ,after updating code look like this 
+
+  # start code here 
+  const express = require('express')
+  const app = express()
+  const port = 3000
+  const path=require("path")
+
+  app.use("/",require(path.join(__dirname,"routes/blog.js")))
+
+  app.listen(port, () => {
+    console.log(`Example app listening on port http://localhost:${port}`)
+  })
+
+  # end code here 
+
+
+  -app.get ki jagh app.use krege kuki ab routing hum routes/blog.js se krege
+  -jab bhi koi dusri file hume khi or use krni hai to path dena pdta hai and usko join krna pdta hai
