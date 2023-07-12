@@ -1,0 +1,10 @@
+learn express step by step :
+
+1.sabse phle npm init krna hai uske baad express and nodemon install krna hai 
+  -npm init
+  -npm i express
+  -npm i -D nodemon (note:here D stand for dev dependency)
+  -create index.js file 
+
+2.agr nodemon na chle to u can use this command 
+  -npx nodemon index.js
