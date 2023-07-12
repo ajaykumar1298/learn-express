@@ -71,3 +71,42 @@ and update code index.js ,after updating code look like this
 
   -app.get ki jagh app.use krege kuki ab routing hum routes/blog.js se krege
   -jab bhi koi dusri file hume khi or use krni hai to path dena pdta hai and usko join krna pdta hai
+
+6.create a folder name =>templates/index.html yha app ka html file hogi
+
+  paste this code in index.html: 
+
+  # start code here 
+    <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Express</title>
+  </head>
+
+  <body>
+    this is the blog express app
+
+  </body>
+
+  </html>
+# end code here 
+
+update routes/blog.js file
+
+these are the changes:
+  # start code here 
+      const express =require("express")
+    const route=express.Router()
+    const path=require("path")
+
+    route.get("/",(req,res)=>{
+      // res.send("hey")
+      res.sendFile(path.join(__dirname,"../templates/index.html"))
+    })
+
+    module.exports=route
+# end code here 
