@@ -5,6 +5,8 @@ learn express step by step :
   -npm i express
   -npm i -D nodemon (note:here D stand for dev dependency)
   -create index.js file 
+  -add .gitignore file for avoiding node_modules file push
+      -create .gitignore file and write node_modules
 
 2.agr nodemon na chle to u can use this command 
   -npx nodemon index.js
